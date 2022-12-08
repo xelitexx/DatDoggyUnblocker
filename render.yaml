@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: unkown-service
+    env: node
+    envVars:
+      - key: NODE_VERSION
+        value: 18.9.0
+    repo: https://gitlab.com/Doomsickle/ultraviolet-ow # optional
+    plan: free
+    buildCommand: npm install
+    startCommand: node .
+    rootDir: ./
+
