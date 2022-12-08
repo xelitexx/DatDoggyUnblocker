@@ -1,6 +1,6 @@
 services:
   - type: web
-    name: unkown-service
+    name: Zslay-web-service
     env: node
     envVars:
       - key: NODE_VERSION
