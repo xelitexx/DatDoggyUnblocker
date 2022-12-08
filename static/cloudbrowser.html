@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>UNKOWN SITE</title>
+    <link href="src/style/browser.css" rel="stylesheet">
+</head>
+<div id="tabs">
+    <div class="tab active" id="tab1">
+        <p class="tabtext">tab</p>
+    </div>
+</div>
+<div class="cbNavigator" id="cbNavigator">
+    <button onclick=Home()><img src="src/assets/images/browser/home-icon-silhouette-svgrepo-com.svg"></button>
+    <button onclick=Back()><img src="src/assets/images/browser/left-arrow-svgrepo-com.svg"></button>
+    <button onclick=Refresh()><img src="src/assets/images/browser/refresh-svgrepo-com.svg"></button>
+    <button onclick=Forward()><img src="src/assets/images/browser/right-straight-arrow-svgrepo-com.svg"></button>
+    <form id="addressbarform" onsubmit="return false">
+    <input id="addressbar" placeholder="url" size="300" autocomplete="off">
+    </form>
+    <h2 class="cbrowser">Uknown Cloud Browser (demo)</h2>
+
+</div>
+<body>
+    <iframe id="browser-content" src="./browserdefaultpage.html">not loaded</iframe>
+    <script src="src/js/browser.js"></script>
+    <script src="src/js/uv/uv.bundle.js"></script>
+    <script src="src/js/uv/uv.config.js"></script>
+</body>
+</html>
