@@ -1,5 +1,5 @@
 #fakeconsole {
-    background-color: black;
+    background-color: red;
     display: flex;
     margin-top: 3vh;
     width: 30%;
@@ -23,7 +23,7 @@
   
   /* Track */
   ::-webkit-scrollbar-track {
-    background: #000000; 
+    background: #790c0cf1; 
     opacity: 0;
   }
    
