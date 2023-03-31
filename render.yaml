@@ -1,6 +1,6 @@
 services:
   - type: web
-    name: Zslay-web-service
+    name: try-again-your-not-funny
     env: node
     envVars:
       - key: NODE_VERSION
