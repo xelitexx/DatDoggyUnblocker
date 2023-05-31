@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: zslay-web-service
+    env: node
+    envVars:
+      - key: NODE_VERSION
+        value: 18.9.0
+    repo: https://gitlab.com/somebozo/dont-worry-about-it # optional
+    plan: free
+    buildCommand: npm install
+    startCommand: node .
+    rootDir: ./
+
