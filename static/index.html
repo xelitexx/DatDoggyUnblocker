@@ -60,48 +60,4 @@
     <script src="src/js/uv/uv.config.js"></script>
     
 </body>
-<script>
-    const dialog = document.getElementById('dialog')
-    const add = document.getElementById('addbtn')
-    add.addEventListener('click', () => {
-        dialog.classList.add('active')
-    })
-    function deleteTodo(ind) {
-    let todo = localStorage.getItem("todo");
-    todoArray = JSON.parse(todo);
-    todoArray.splice(ind, 1);
-    localStorage.setItem("todo", JSON.stringify(todoArray));
-    displayTodo();
-   }
-   function displayTodo() {
-    let todo = localStorage.getItem("todo");
-    if (todo === null) {
-      todoArray = [];
-    } else {
-      todoArray = JSON.parse(todo);
-    }
-    let htmlCode = "";
-    
-    function encode(string) {
-        return __uv$config.prefix + __uv$config.encodeUrl(string)
-    }
-    const listBox = document.getElementById("bookmark_list");
-    todoArray.forEach((list, ind) => {
-        htmlCode += `<div class='bookmark'>
-        <a class="bookmark-title" href='${encode(list.split(' ')[1])}'>${list.split(' ')[0]}</a>
-        <br>
-        <h4 class="bookmark-url">${list.split(' ')[1]}</h4>
-        <button onclick='deleteTodo(${ind})' class='bm-delete'><img src="src/assets/images/iconmonstr-trash-can-1.svg"></button>
-     </div>`;
-    });
-    listBox.innerHTML = htmlCode;
-}
-navigator.serviceWorker.getRegistrations().then(registrations => {
-    if(registrations != "") {
-        document.getElementById('startbtn').style.display = "none"
-        document.getElementById('warning').style.display = "none"
-        document.getElementById('addbtn').style.display = "block"
-    }
-});
-</script>
 </html>
