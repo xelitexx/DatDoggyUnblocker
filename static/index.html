@@ -54,26 +54,11 @@
             start the service worker with the button above before using bookmarks
         </div>
     </div>
-    <div id="modal">
-        <dialog class="addbookmark" id="dialog" open="false">
-        <h1 class="modal-header">add bookmark</h1>
-        <form id="bmForm" onsubmit="return false;">
-            <input id="text" autocomplete="off" placeholder="name">
-            </form>
-            <form id="bmForm2" onsubmit="return false">
-            <input id="text2" autocomplete="off" placeholder="url (not proxied)">
-        </form>
 
-        <br>
-        <button id="add-task-btn" onclick="javascript:var text = document.getElementById(`text`); var text2 = document.getElementById(`text2`); if(text.value !== '' && text2.value !== '') {dialog.classList.remove('active')}">add</button>
-        <button onclick="javascript:dialog.classList.remove('active')">cancel</button>
-    </dialog>
-    <div id="blur"></div>
-</div>
 <script type="module" src="src/js/index.js"></script>
     <script src="src/js/uv/uv.bundle.js"></script>
     <script src="src/js/uv/uv.config.js"></script>
-    <script type="module" src="src/js/bookmarks.js"></script>
+    
 </body>
 <script>
     const dialog = document.getElementById('dialog')
