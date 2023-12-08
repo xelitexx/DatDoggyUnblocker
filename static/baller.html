@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>New Tab</title>
+    <link href="src/style/index.css" rel="stylesheet">
+    <link href="src/style/console.css" rel="stylesheet">
+    <link href="src/style/bookmarks.css" rel="stylesheet">
+</head>
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-221431267-2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-221431267-2');
+</script>
+<body>
+    <div class="logo-wrapper">
+        <h1>Zombi3Slayz Web Prox</h1>
+    </div>
+    <div class="desc">
+        <p><a href="https://discord.gg/Nt66FhxJFw">JOIN MY DISCORD(NON-PROXIED)</a> OR <a href="https://zslay-web-service-9urj.onrender.com/prox/https%3A%2F%2Fdiscord.com%2Finvite%2FNt66FhxJFw">JOIN MY DISCORD PROXIED LINK</a>
+    </div>
+    <form id="proxf">
+        <input id="prox" placeholder="literally go anywhere!!">
+    </form>
+    <br>
+    <p id="or">Welcome to Zombi3Slayz Prox.</p>
+    <div id="fakeconsole">
+        <pre id="fakeconsole_output"></pre>
+    </div>
+    <div class="bookmarks">
+        <div id="bookmark_list">
+        </div>
+        <h1>custom bookmarks <button id="addbtn">add</button><br><button id="startbtn">Start Service Worker (required)</button></h1>
+        <div id="warning">
+            start the service worker with the button above before using bookmarks
+        </div>
+    </div>
+    <div id="modal">
+        <dialog class="addbookmark" id="dialog" open="false">
+        <h1 class="modal-header">add bookmark</h1>
+        <form id="bmForm" onsubmit="return false;">
+            <input id="text" autocomplete="off" placeholder="name">
+            </form>
+            <form id="bmForm2" onsubmit="return false">
+            <input id="text2" autocomplete="off" placeholder="url (not proxied)">
+        </form>
+
+        <br>
+        <button id="add-task-btn" onclick="javascript:var text = document.getElementById(`text`); var text2 = document.getElementById(`text2`); if(text.value !== '' && text2.value !== '') {dialog.classList.remove('active')}">add</button>
+        <button onclick="javascript:dialog.classList.remove('active')">cancel</button>
+    </dialog>
+    <div id="blur"></div>
+</div>
+<script type="module" src="src/js/index.js"></script>
+    <script src="src/js/uv/uv.bundle.js"></script>
+    <script src="src/js/uv/uv.config.js"></script>
+    <script type="module" src="src/js/bookmarks.js"></script>
+</body>
+<script>
+    const dialog = document.getElementById('dialog')
+    const add = document.getElementById('addbtn')
+    add.addEventListener('click', () => {
+        dialog.classList.add('active')
+    })
+    function deleteTodo(ind) {
+    let todo = localStorage.getItem("todo");
+    todoArray = JSON.parse(todo);
+    todoArray.splice(ind, 1);
+    localStorage.setItem("todo", JSON.stringify(todoArray));
+    displayTodo();
+   }
+   function displayTodo() {
+    let todo = localStorage.getItem("todo");
+    if (todo === null) {
+      todoArray = [];
+    } else {
+      todoArray = JSON.parse(todo);
+    }
+    let htmlCode = "";
+    
+    function encode(string) {
+        return __uv$config.prefix + __uv$config.encodeUrl(string)
+    }
+    const listBox = document.getElementById("bookmark_list");
+    todoArray.forEach((list, ind) => {
+        htmlCode += `<div class='bookmark'>
+        <a class="bookmark-title" href='${encode(list.split(' ')[1])}'>${list.split(' ')[0]}</a>
+        <br>
+        <h4 class="bookmark-url">${list.split(' ')[1]}</h4>
+        <button onclick='deleteTodo(${ind})' class='bm-delete'><img src="src/assets/images/iconmonstr-trash-can-1.svg"></button>
+     </div>`;
+    });
+    listBox.innerHTML = htmlCode;
+}
+navigator.serviceWorker.getRegistrations().then(registrations => {
+    if(registrations != "") {
+        document.getElementById('startbtn').style.display = "none"
+        document.getElementById('warning').style.display = "none"
+        document.getElementById('addbtn').style.display = "block"
+    }
+});
+</script>
+</html>
