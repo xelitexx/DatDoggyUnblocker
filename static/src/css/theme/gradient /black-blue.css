@@ -16,7 +16,7 @@ h2 {
 }
 
 #INImg {
-    content: url("/main.png");
+    content: url("/zombimg.png");
 }
 
 input, select, .column, .key-form, button, .key-button, .searchbar {
