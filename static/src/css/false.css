@@ -12,20 +12,19 @@
             padding: 20px;
             text-align: center;
         }
-
-        nav {
+        .navbar {
             background-color: #777;
             color: #fff;
             padding: 10px;
             text-align: center;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            transition: top 0.3s;
         }
-
-        nav a {
-            color: #fff;
-            text-decoration: none;
-            margin-right: 10px;
+        .navbar.hidden {
+            top: -50px;
         }
-
         main {
             padding: 20px;
         }
