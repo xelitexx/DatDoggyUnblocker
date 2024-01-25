@@ -9,6 +9,9 @@
   { path: '/local-news', file: 'tabs.html' },
   { path: '/image-galleries', file: 'go.html' },
   { path: '/blog', file: 'widget.html' },
+  { path: '/home', file: 'home.html' },
+  { path: '/contact', file: 'contact.html' },
+  { path: '/about', file: 'about.html' },
 ];
   
   
