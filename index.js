@@ -1,7 +1,3 @@
-(async() => {
-    await import('./index.mjs');
-  })();
-  
   const routes = [
   { path: '/', file: 'who-let-him-cook.html' },
   { path: '/news', file: 'apps.html' },
@@ -15,5 +11,6 @@
   { path: '/about', file: 'about.html' },
 ];
   
-  
-
+(async() => {
+    await import('./index.mjs');
+  })();
