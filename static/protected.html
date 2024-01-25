@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login</title>
+    <script>
+        function login() {
+            var accessCode = "1234";
+            var enteredCode = document.getElementById("code").value;
+
+            if (enteredCode === accessCode) {
+                // Redirect to the protected page
+                window.location.href = "dev.html";
+            } else {
+                // Display an error message if the code is incorrect
+                document.getElementById("error").textContent = "Invalid access code!";
+            }
+        }
+    </script>
+</head>
+<body>
+    <h2>Login</h2>
+    <input type="password" id="code" placeholder="Access Code" required>
+    <button onclick="login()">Login</button>
+    <p id="error"></p>
+</body>
+</html>
