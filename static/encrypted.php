@@ -19,3 +19,21 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 }
 ?>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login</title>
+</head>
+<body>
+    <h2>Login</h2>
+    <form method="POST" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
+        <input type="password" name="code" placeholder="Access Code" required>
+        <button type="submit">Login</button>
+    </form>
+    
+    <?php if (isset($error)) { ?>
+        <p><?php echo $error; ?></p>
+    <?php } ?>
+</body>
+</html>
