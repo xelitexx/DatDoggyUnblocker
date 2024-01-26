@@ -1,6 +1,7 @@
 #fakeconsole {
     background-color: red;
     display: flex;
+    border-radius: 25px;
     margin-top: 3vh;
     width: 30%;
     height: 30vh;
