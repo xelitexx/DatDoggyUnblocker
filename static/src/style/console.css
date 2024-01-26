@@ -1,7 +1,7 @@
 #fakeconsole {
     background-color: red;
     display: flex;
-    border-top-left-radius: 25px;
+    border-radius: 25px;
     margin-top: 3vh;
     width: 30%;
     height: 30vh;
@@ -13,26 +13,27 @@
 #fakeconsole_output {
     color: white;
     text-align: left;
-    font-size: 1.5vh;
+    font-size: medium;
     height: 100%;
     margin: 0;
 }
 /* width */
 ::-webkit-scrollbar {
     width: 10px;
-    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
 }
   }
   
   /* Track */
   ::-webkit-scrollbar-track {
     background: #790c0cf1; 
-    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
     opacity: 0;
   }
    
   /* Handle */
   ::-webkit-scrollbar-thumb {
     background: #888; 
+    border-bottom-right-radius: 25px;
   }
   
