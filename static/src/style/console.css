@@ -1,7 +1,7 @@
 #fakeconsole {
     background-color: red;
     display: flex;
-    border-radius: 25px;
+    border-top-left-radius: 25px;
     margin-top: 3vh;
     width: 30%;
     height: 30vh;
@@ -20,11 +20,14 @@
 /* width */
 ::-webkit-scrollbar {
     width: 10px;
+    border-top-left-radius: 25px;
+}
   }
   
   /* Track */
   ::-webkit-scrollbar-track {
     background: #790c0cf1; 
+    border-top-left-radius: 25px;
     opacity: 0;
   }
    
