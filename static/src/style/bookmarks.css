@@ -1,3 +1,16 @@
+//Show & Hide css for the circle
+#circle {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  cursor: move;
+}
+// Bookmark css
 .bookmarks {
     position: absolute;
 }
