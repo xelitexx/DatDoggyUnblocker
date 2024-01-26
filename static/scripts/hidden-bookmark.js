@@ -1,9 +1,9 @@
 //Shows & Hides The Bookmarks
-document.getElementById('circle').addEventListener('click', function() {
+document.getElementById('hiddenbookmark').addEventListener('click', function() {
   this.style.display = 'block';
 });
 //Below is the Dragging system for the "circle" being the Popup menu for the bookmarks
-var circle = document.getElementById("circle");
+var circle = document.getElementById("hiddenbookmark");
 
 var isDragging = false;
 var offset = { x: 0, y: 0 };
