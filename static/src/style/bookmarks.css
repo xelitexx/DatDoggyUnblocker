@@ -87,12 +87,18 @@
     z-index: 1;
 }
 .addbookmark button {
-    width: 20%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transform: translateX(12vw);
+  background-color: #f00;
+  color: #000;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  margin-right: 10px;
+  cursor: pointer;
+  justify-content: center;
+  align-items: center;
+  transform: translateX(12vw);
 }
+
 #blur {
     width: 200vw;
     height: 200vh;
@@ -111,5 +117,11 @@
     font-size: 2vh;
 }
 #addbtn {
-    display: none;
+  background-color: #f00;
+  color: #000;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  margin-right: 10px;
+  cursor: pointer;
 }
