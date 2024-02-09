@@ -1,330 +1,41 @@
 <!DOCTYPE html>
 <html>
-<style>
-/* Global styles */
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-    }
-    
-    .container {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-    }
-    
-    /* Logo styles */
-    .logo-wrapper {
-      text-align: center;
-      margin-bottom: 20px;
-    }
-    
-    h1 {
-      font-size: 24px;
-      color: #333;
-    }
-    
-    /* Description styles */
-    .desc {
-      text-align: center;
-      margin-bottom: 20px;
-    }
-    
-    /* Form styles */
-    form#proxf {
-      text-align: center;
-      margin-bottom: 20px;
-    }
-    
-    input#prox {
-      width: 200px;
-      height: 30px;
-      border-radius: 15px;
-      border: none;
-      outline: none;
-      padding: 5px 10px;
-    }
-    
-    /* Heading styles */
-    p#or {
-      text-align: center;
-      margin-bottom: 20px;
-      font-size: 18px;
-    }
-    
-    /* Fake console styles */
-    #fakeconsole {
-      text-align: center;
-      margin-bottom: 20px;
-    }
-    
-    pre#fakeconsole_output {
-      background-color: #f1f1f1;
-      border-radius: 10px;
-      padding: 10px;
-      font-family: monospace;
-      font-size: 14px;
-      white-space: pre-wrap;
-    }
-    
-    /* Bookmarks styles */
-    .bookmarks {
-      text-align: center;
-      margin-bottom: 20px;
-    }
-    
-    #bookmark_list {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-wrap: wrap;
-      max-width: 800px;
-      margin: 0 auto;
-    }
-    
-    h1 {
-      font-size: 24px;
-      color: #333;
-      margin-bottom: 10px;
-    }
-    
-    button#addbtn {
-      background-color: #333;
-      color: #fff;
-      border: none;
-      border-radius: 5px;
-      padding: 5px 10px;
-      margin-right: 10px;
-      cursor: pointer;
-    }
-    
-    button#startbtn {
-      background-color: #333;
-      color: #fff;
-      border: none;
-      border-radius: 5px;
-      padding: 5px 10px;
-      cursor: pointer;
-    }
-    
-    #warning {
-      background-color: #f1f1f1;
-      border-radius: 5px;
-      padding: 10px;
-      margin-top: 10px;
-    }
-    
-    /* Modal styles */
-    #modal {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-color: rgba(0, 0, 0, 0.5);
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      z-index: 9999;
-      display: none;
-    }
-    
-    dialog.addbookmark {
-      background-color: #fff;
-      border-radius: 10px;
-      padding: 20px;
-      max-width: 400px;
-    }
-    
-    h1.modal-header {
-      font-size: 18px;
-      color: #333;
-      margin-bottom: 10px;
-    }
-    
-    form#bmForm,
-    form#bmForm2 {
-      margin-bottom: 10px;
-    }
-    
-    input#text,
-    input#text2 {
-      width: 100%;
-      height: 30px;
-      border-radius: 5px;
-      border: 1px solid #ccc;
-      outline: none;
-      padding: 5px 10px;
-    }
-    
-    button#add-task-btn,
-    button {
-      background-color: #333;
-      color: #fff;
-      border: none;
-      border-radius: 5px;
-      padding: 5px 10px;
-      margin-right: 10px;
-      cursor: pointer;
-    }
-    
-    /* Blur effect */
-    #blur {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-color: rgba(0, 0, 0, 0.5);
-      backdrop-filter: blur(5px);
-      z-index: 9998;
-      display: none;
-    }
-    
-    /* Other styles */
-    a.bookmark-title {
-      color: #333;
-      text-decoration: none;
-      font-size: 16px;
-      margin-bottom: 5px;
-    }
-    
-    h4.bookmark-url {
-      color: #666;
-      font-size: 14px;
-      margin-bottom: 10px;
-    }
-    
-    button.bm-delete {
-      background-color: transparent;
-      border: none;
-      cursor: pointer;
-      outline: none;
-    }
-    
-    button.bm-delete img {
-      width: 16px;
-      height: 16px;
-    }
-    
-    /* Media queries */
-    @media (max-width: 768px) {
-      input#prox {
-        width: 100%;
-      }
-      
-      pre#fakeconsole_output {
-        font-size: 12px;
-      }
-    }
-    </style>
-
+    <title>Template Site</title>
+    <link rel="stylesheet" href="/src/css/false.css">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <title>New Tab</title>
 
 </head>
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-221431267-2"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'UA-221431267-2');
-</script>
 <body>
-      <div class="container">
-  </div>
-
-    <div class="logo-wrapper">
-        <h1>Zombi3Slayz Web Prox</h1>
-    </div>
-    <div class="desc">
-        <p>
-    </div>
-    <form id="proxf">
-        <input id="prox" placeholder="Search As You Wish">
-    </form>
-    <br>
-    <p id="or">Welcome to Zombi3Slayz Web Service</p>
-    <div id="fakeconsole">
-        <pre id="fakeconsole_output"></pre>
-    </div>
-    <div id="hiddenbookmark"></div>
-    <div class="bookmarks">
-        <div id="bookmark_list">
-        </div>
-        <h1>Custom Bookmarks<button id="addbtn">add</button><br><button id="startbtn">Start Service Worker (REQUIRED)</button></h1>
-        <div id="warning">
-            ⚠⚠⚠ ACTIVATE THE SERVICE WORKER BEFORE USING BOOKMARKS ⚠⚠⚠
-        </div>
-    </div>
-    <div id="modal">
-        <dialog class="addbookmark" id="dialog" open="false">
-        <h1 class="modal-header">Add Bookmark</h1>
-        <form id="bmForm" onsubmit="return false;">
-            <input id="text" autocomplete="off" placeholder="name">
-            </form>
-            <form id="bmForm2" onsubmit="return false">
-            <input id="text2" autocomplete="off" placeholder="Enter Url Non-Proxied ">
-        </form>
-
-        <br>
-        <button id="add-task-btn" onclick="javascript:var text = document.getElementById(`text`); var text2 = document.getElementById(`text2`); if(text.value !== '' && text2.value !== '') {dialog.classList.remove('active')}">add</button>
-        <button onclick="javascript:dialog.classList.remove('active')">cancel</button>
-    </dialog>
-    <div id="blur"></div>
-</div>
-<script type="module" src="src/js/index.js"></script>
-    <script src="src/js/uv/uv.bundle.js"></script>
-    <script src="src/js/uv/uv.config.js"></script>
-    <script type="module" src="src/js/bookmarks.js"></script>
+    <header>
+        <h1>Template Site</h1>
+    </header>
+    <nav class="navbar" id="navbar">
+        <a href="home.html">Home</a> |
+        <a href="about.html">About</a> |
+        <a href="contact.html">Contact</a> |
+        <a href="protected.html">Login</a>
+    </nav>
+    <main>
+        <!-- Your page content goes here -->
+    </main>
+    <footer>
+        &copy; 2022 Template Site. All rights reserved.
+    </footer>
+    <script>
+        // JavaScript code to hide/show the navbar on scroll
+        var prevScrollPos = window.pageYOffset;
+        window.onscroll = function() {
+            var currentScrollPos = window.pageYOffset;
+            if (prevScrollPos > currentScrollPos) {
+                document.getElementById("navbar").classList.remove("hidden");
+            } else {
+                document.getElementById("navbar").classList.add("hidden");
+            }
+            prevScrollPos = currentScrollPos;
+        }
+    </script>
 </body>
-<script>
-    const dialog = document.getElementById('dialog')
-    const add = document.getElementById('addbtn')
-    add.addEventListener('click', () => {
-        dialog.classList.add('active')
-    })
-    function deleteTodo(ind) {
-    let todo = localStorage.getItem("todo");
-    todoArray = JSON.parse(todo);
-    todoArray.splice(ind, 1);
-    localStorage.setItem("todo", JSON.stringify(todoArray));
-    displayTodo();
-   }
-   function displayTodo() {
-    let todo = localStorage.getItem("todo");
-    if (todo === null) {
-      todoArray = [];
-    } else {
-      todoArray = JSON.parse(todo);
-    }
-    let htmlCode = "";
-    
-    function encode(string) {
-        return __uv$config.prefix + __uv$config.encodeUrl(string)
-    }
-    const listBox = document.getElementById("bookmark_list");
-    todoArray.forEach((list, ind) => {
-        htmlCode += `<div class='bookmark'>
-        <a class="bookmark-title" href='${encode(list.split(' ')[1])}'>${list.split(' ')[0]}</a>
-        <br>
-        <h4 class="bookmark-url">${list.split(' ')[1]}</h4>
-        <button onclick='deleteTodo(${ind})' class='bm-delete'><img src="src/assets/images/iconmonstr-trash-can-1.svg"></button>
-     </div>`;
-    });
-    listBox.innerHTML = htmlCode;
-}
-navigator.serviceWorker.getRegistrations().then(registrations => {
-    if(registrations != "") {
-        document.getElementById('startbtn').style.display = "none"
-        document.getElementById('warning').style.display = "none"
-        document.getElementById('addbtn').style.display = "block"
-    }
-});
-</script>
 </html>
