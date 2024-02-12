@@ -1,19 +1,52 @@
 import createServer from '@tomphttp/bare-server-node';
 import http from 'http';
 import nodeStatic from 'node-static';
+import cors from 'cors';
+import path from "path";
 
-const routes = [
-  { path: '/', file: 'who-let-him-cook.html' },
-  { path: '/news', file: 'apps.html' },
-  { path: '/events', file: 'games.html' },
-  { path: '/diagnostic', file: 'settings.html' },
-  { path: '/local-news', file: 'tabs.html' },
-  { path: '/image-galleries', file: 'go.html' },
-  { path: '/blog', file: 'widget.html' },
-  { path: '/home', file: 'home.html' },
-  { path: '/contact', file: 'contact.html' },
-  { path: '/about', file: 'about.html' },
-];
+const server = http.createServer();
+const app = express(server);
+const __dirname = process.cwd();
+
+
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+app.use(express.static(__dirname + '/static'));
+app.use(cors());
+
+
+app.get('/', (req, res) => {
+    res.sendFile(path.join(process.cwd(), '/pages/index.html'));
+});
+
+app.get('/index', (req, res) => {
+  res.sendFile(path.join(process.cwd(), '/pages/index.html'));
+});
+
+app.get('/apps', (req, res) => {
+  res.sendFile(path.join(process.cwd(), '/pages/apps.html'));
+});
+
+app.get('/about', (req, res) => {
+  res.sendFile(path.join(process.cwd(), '/pages/about.html'));
+});
+
+app.get('/extras', (req, res) => {
+  res.sendFile(path.join(process.cwd(), '/pages/e.html'));
+});
+
+app.get('/edu', (req, res) => {
+  res.sendFile(path.join(process.cwd(), '/pages/edu.html'));
+});
+
+app.get('/games', (req, res) => {
+  res.sendFile(path.join(process.cwd(), '/pages/games.html'));
+});
+
+app.get('/s', (req, res) => {
+  res.sendFile(path.join(process.cwd(), '/pages/settings.html'));
+});
+
 
 const bare = createServer('/bare/');
 const serve = new nodeStatic.Server('static/');
