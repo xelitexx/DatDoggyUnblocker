@@ -2,9 +2,6 @@ services:
   - type: web
     name: zslay-web-service
     env: docker
-    envVars:
-      - key: NODE_VERSION
-        value: 18.9.0
     repo: https://gitlab.com/somebozo/dont-worry-about-it # optional
     plan: free
     buildCommand: npm install
