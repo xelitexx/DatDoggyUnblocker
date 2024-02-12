@@ -1,7 +1,7 @@
 services:
   - type: web
     name: zslay-web-service
-    env: node
+    env: docker
     envVars:
       - key: NODE_VERSION
         value: 18.9.0
