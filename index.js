@@ -7,13 +7,13 @@ import cors from 'cors'
 const __dirname = process.cwd()
 const server = http.createServer()
 const app = express(server)
-const bareServer = createBareServer('/v/')
+const bareServer = createBareServer('/prox/')
 const PORT = 8080
 
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
 app.use(cors())
-app.use(express.static(path.join(__dirname, 'static')))
+app.use(express.static(path.join(__dirname, 'pages')))
 
 const routes = [
   { path: '/', file: 'index.html' },
@@ -25,7 +25,7 @@ const routes = [
   { path: '/w', file: 'edu.html' },
 ]
 
-app.get('/y/*', cors({ origin: false }), async (req, res, next) => {
+app.get('/prox/*', cors({ origin: false }), async (req, res, next) => {
   try {
     const reqTarget = `https://raw.githubusercontent.com/ypxa/y/main/${req.params[0]}`
     const asset = await fetch(reqTarget)
