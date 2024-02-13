@@ -15,8 +15,10 @@
 .logo-wrapper img {
     width: 200px;
     height: auto;
-    border: 1px solid black;
-    border-radius: 5px;
+    transform: 30px;
+    position: relative;
+    top: -20px;
+    left: 30px;
 }
 
 .nav-links {
