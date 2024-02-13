@@ -12,6 +12,11 @@
     align-items: center;
 }
 
+.nav {
+      height: 120; /* Set the desired height */
+      overflow-y: scroll; /* Enable vertical scrolling */
+}
+
 .logo-wrapper img {
     width: 200px;
     height: auto;
