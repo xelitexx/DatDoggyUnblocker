@@ -9,11 +9,6 @@
     }
 }
 
-.container {
-      height: 100%; /* Set the desired height */
-      overflow-y: scroll; /* Enable vertical scrolling */
-}
-
 :root {
     overflow: hidden;
 }
