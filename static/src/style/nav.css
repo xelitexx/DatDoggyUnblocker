@@ -20,9 +20,9 @@
 .logo-wrapper img {
     width: 200px;
     height: auto;
-    position: relative;
-    top: -60px;
-    left: -90px;
+    position: absolute;
+    top: -90px;
+    left: -150px;
 }
 
 .nav-links {
@@ -40,8 +40,9 @@
     color: #fff;
     text-decoration: none;
     font-size: 16px;
+    transition: color 0.3s ease;
 }
 
 .nav-links li a:hover {
-    text-decoration: underline;
+    color: #df1d1d;
 }
