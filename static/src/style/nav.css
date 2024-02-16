@@ -17,12 +17,13 @@
       overflow-y: scroll; /* Enable vertical scrolling */
 }
 
+.logo-wrapper {
+    display: inline-block; 
+}
+
 .logo-wrapper img {
-    width: 200px;
-    height: auto;
-    position: absolute;
-    top: -90px;
-    left: -150px;
+    max-height: 40px;  
+    vertical-align: middle; 
 }
 
 .nav-links {
