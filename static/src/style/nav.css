@@ -45,6 +45,6 @@
 }
 
 .nav-links li a:hover {
+    transform: scale(1.1);
     color: #df1d1d;
-    transform: scale(1.1)
 }
