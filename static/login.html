@@ -11,10 +11,10 @@
   var enteredPass = document.getElementById("pass").value;
 
   // Encrypt the entered password
-  var encryptedPass = encrypt(enteredPass);
+  var encryptedPass = encrypt(accessPass);
 
   // Decrypt the access password
-  var decryptedAccessPass = decrypt(accessPass);
+  var decryptedAccessPass = decrypt(enteredPass);
 
   if (encryptedPass === decryptedAccessPass) {
     // Redirect to the protected page
