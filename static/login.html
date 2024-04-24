@@ -3,22 +3,54 @@
 <head>
     <link href="src/style/login.css" rel="stylesheet">
     <title>Login</title>
-    <script>
+<script>
     function login() {
-        var accessPass = "1234";
-        var accessUser = "Zombi3";
-        var enteredUser = document.getElementById("user").value;
-        var enteredPass = document.getElementById("pass").value;
+  var accessPass = "1234";
+  var accessUser = "Zombi3";
+  var enteredUser = document.getElementById("user").value;
+  var enteredPass = document.getElementById("pass").value;
 
-        if ((enteredPass === accessPass) && (enteredUser === accessUser)) {
-            // Redirect to the protected page
-            window.location.href = "dev.html";
-        } else {
-            // Display an error message if the code is incorrect
-            document.getElementById("error").textContent = "Invalid access code!";
-        }
-    }
-    </script>
+  // Encrypt the entered password
+  var encryptedPass = encrypt(enteredPass);
+
+  // Decrypt the access password
+  var decryptedAccessPass = decrypt(accessPass);
+
+  if (encryptedPass === decryptedAccessPass) {
+    // Redirect to the protected page
+    window.location.href = "dev.html";
+  } else {
+    // Display an error message if the code is incorrect
+    document.getElementById("error").textContent = "Invalid access code!";
+  }
+}
+
+function encrypt(str) {
+  var key = 3; // Caesar Cipher key
+  var encryptedStr = "";
+
+  for (var i = 0; i < str.length; i++) {
+    var charCode = str.charCodeAt(i);
+    charCode = (charCode + key) % 255;
+    encryptedStr += String.fromCharCode(charCode);
+  }
+
+  return encryptedStr;
+}
+
+function decrypt(str) {
+  var key = 3; // Caesar Cipher key
+  var decryptedStr = "";
+
+  for (var i = 0; i < str.length; i++) {
+    var charCode = str.charCodeAt(i);
+    charCode = (charCode - key) % 255;
+    decryptedStr += String.fromCharCode(charCode);
+  }
+
+  return decryptedStr;
+}
+</script>
 </head>
 <body>
     <h1>Login</h1>
