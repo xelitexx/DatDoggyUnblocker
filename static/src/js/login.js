@@ -1,6 +1,6 @@
 function login() {
-var accessPass = "1234";
-var accessUser = "Zombi3";
+var accessPass = "MeteorNetwork";
+var accessUser = "MeteorNetwork";
 var enteredUser = document.getElementById("user").value;
 var enteredPass = document.getElementById("pass").value;
 
