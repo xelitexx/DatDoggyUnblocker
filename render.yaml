@@ -1,11 +1,11 @@
 services:
   - type: web
-    name: zslay-web-service
+    name: meteor-network
     env: node
     envVars:
       - key: NODE_VERSION
         value: 18.9.0
-    repo: https://gitlab.com/somebozo/dont-worry-about-it # optional
+    repo: # optional
     plan: free
     buildCommand: npm install
     startCommand: node .
