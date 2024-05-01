@@ -1,8 +1,8 @@
 {
-    "name": "Ultraviolet App",
-    "description": "Node.js Ultraviolet instance",
+    "name": "Meteor Network",
+    "description": "Meteor Network Website",
     "repository": "https://github.com/titaniumnetwork-dev/ultraviolet-web-app",
     "logo": "https://github.com/titaniumnetwork-dev/Ultraviolet/blob/main/uv.png?raw=true",
-    "keywords": ["tomp", "ultraviolet"]
+    "keywords": ["Reading", "School"]
 }
 
