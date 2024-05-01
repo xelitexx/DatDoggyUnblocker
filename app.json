@@ -1,7 +1,7 @@
 {
     "name": "Meteor Network",
     "description": "Meteor Network Website",
-    "repository": "https://github.com/titaniumnetwork-dev/ultraviolet-web-app",
+    "repository": "https://gitlab.com/Helix_Felix/meteor_networkv1",
     "logo": "https://github.com/titaniumnetwork-dev/Ultraviolet/blob/main/uv.png?raw=true",
     "keywords": ["Reading", "School"]
 }
