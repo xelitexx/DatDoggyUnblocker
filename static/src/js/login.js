@@ -1,6 +1,6 @@
 function login() {
-var accessPass = "Dat Doggy Unblocker";
-var accessUser = "welovedoggys";
+var accessPass = "welovedoggys";
+var accessUser = "Dat Doggy Unblocker";
 var enteredUser = document.getElementById("user").value;
 var enteredPass = document.getElementById("pass").value;
 
