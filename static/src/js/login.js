@@ -1,6 +1,6 @@
 function login() {
-var accessPass = "MeteorNetwork";
-var accessUser = "welovemeteors";
+var accessPass = "Dat Doggy Unblocker";
+var accessUser = "welovedoggys";
 var enteredUser = document.getElementById("user").value;
 var enteredPass = document.getElementById("pass").value;
 
